@@ -19,24 +19,30 @@ $(document).ready(function(){
     $('.card-title2').text(title + " in ES6");
     $('.card-stuff1').addClass(title.toLowerCase() + "1")
     $('.card-stuff2').addClass(title.toLowerCase() + "2")
-    refillingStuff();
+    refillingStuff(title);
   });
 
   // passing information to the uppercards
-  function refillingStuff() {
-    $('.variables1').append(variable1)
-    $('.variables2').append(variable2)
-    $('.loops1').append(loop1)
-    $('.loops2').append(loop2)
-    $('.interpolate1').append(interpolateEs5)
-    $('.interpolate2').append(interpolateEs6)
-    $('.functions1').append(func1)
-    $('.functions2').append(func2)
-  }
-    function emptyContent() {
-      $('.card-stuff1').empty();
-      $('.card-stuff2').empty();
+  function refillingStuff(title) {
+    if(title === 'Variables') {
+      $('.variables1').append(variable1)
+      $('.variables2').append(variable2)
+    } else if(title === 'Loops') {
+      $('.loops1').append(loop1)
+      $('.loops2').append(loop2)
+    } else if(title === 'Interpolate') {
+      $('.interpolate1').append(interpolateEs5)
+      $('.interpolate2').append(interpolateEs6)
+    } else if(title === 'Functions') {
+      $('.functions1').append(func1)
+      $('.functions2').append(func2)
     }
+  }
+
+  function emptyContent() {
+    $('.card-stuff1').empty();
+    $('.card-stuff2').empty();
+  }
   // long and not clear explanations
   const variable1 = "<h6>Sintax:</h6><p>var name = \"Luciano\"</p>"
   const variable2 = "<h6>Sintax:</h6><p>const name = \"Luciano\"</p><p>let job = \"designer\"</p>"
