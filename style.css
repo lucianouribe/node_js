@@ -1,4 +1,24 @@
 body {
   background-color: #c2c2c2;
   font-family: 'Roboto', Helvetica, Arial, sans-serif;
+  font-weight: 100;
+}
+h1 {
+  font-weight: 100;
+  color: #7D766E;
+}
+.card-opening {
+  display: none;
+}
+.card {
+  background-color: #7D766E;
+
+}
+.btn {
+  background-color: #fff;
+  color: #7D766E;
+}
+.btn:hover {
+  background-color: #ccc;
+  color: #fff;
 }
